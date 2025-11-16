@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bestiário das Almas</title>
+
+<!-- Fonte mágica -->
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'MedievalSharp', cursive;
+    background: radial-gradient(ellipse at center, #f7e7b0 0%, #d3b87a 100%);
+    color: #3b2a16;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    padding: 40px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: linear-gradient(to bottom right, #f7e7b0 0%, #e1c98b 100%);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #d4af37;
+  }
+
+  .page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><circle cx="50%" cy="50%" r="45%" stroke="%23d4af37" stroke-width="3" fill="none" opacity="0.1"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+    margin: 0;
+    color: #3b2a16;
+    text-shadow: 1px 1px 0 #e9d8a6;
+  }
+
+  .divider {
+    border-top: 3px double #d4af37;
+    margin: 20px 0;
+  }
+
+  .symbol {
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #d4af37;
+  }
+
+  .creature {
+    page-break-after: always;
+  }
+
+  .desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 20px;
+    text-align: justify;
+  }
+
+  .abilities {
+    margin-top: 15px;
+    border-top: 1px solid #d4af37;
+    padding-top: 10px;
+    font-size: 0.95rem;
+  }
+
+  .class-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #d4af37;
+    margin-top: 40px;
+  }
+
+  /* Botão PDF */
+  #generatePDF {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: #d4af37;
+    color: #3b2a16;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'MedievalSharp', cursive;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  }
+
+  #generatePDF:hover {
+    background-color: #e9cf6a;
+  }
+  p {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<button id="generatePDF">Gerar PDF</button>
+
+<div id="bestiary">
+
+  <div class="page">
+    <h1>🕯️ Bestiário das Almas 🕯️</h1>
+    <div class="divider"></div>
+    <p style="text-align:center;">Uma coleção mística de entidades celestiais, infernais e naturais, compiladas por <b>Enderka</b>.</p>
+    <div class="divider"></div>
+  </div>
+  <!-- ======== CLASSE CELESTIAL ✨ ======== -->
+  <div class="page">
+    <div class="class-title">✨ Classe Celestial ✨</div>
+  </div>
+
+  <div class="page creature">
+    <span class="symbol">✨</span>
+    <h2>Anjo</h2>
+    <div class="desc">
+      Ser de luz e pureza, mensageiro das forças divinas. Representa equilíbrio, justiça e compaixão.
+      Suas asas irradiam energia dourada capaz de curar e purificar, mas também de destruir o mal.
+      Frequentemente vistos como guardiões espirituais, sua presença inspira esperança e serenidade.
+    </div>
+    <div class="abilities">Habilidades: Cura divina, purificação, manipulação da luz.</div><br><br><br>
+    <h3>Atributos base:</H3><br><br>
+      <p>Magia: 3<br>
+        Adestramento: 3<br>
+        Extração: 2
+      </p>
+  </div>
+
+  <div class="page creature">
+    <span class="symbol">✨</span>
+    <h2>Valquíria</h2>
+    <div class="desc">
+      Guerreira sagrada das lendas nórdicas, enviada pelos deuses para escolher os bravos caídos em batalha.
+      Monta cavalos etéreos e usa lanças de energia celestial. É símbolo de honra, coragem e destino.
+    </div>
+    <div class="abilities">Habilidades: Voo, força divina, convocação dos espíritos dos heróis.</div>
+        <h3>Atributos base:</H3><br><br>
+      <p>Força: 3<br>
+        Combate: 4<br>
+        Armas: 4
+      </p>
+  </div>
+
+  <div class="page creature">
+    <span class="symbol">✨</span>
+    <h2>Nephilim</h2>
+    <div class="desc">
+      Híbrido proibido entre anjos e humanos. Dotado de imenso poder, vive em conflito entre a luz e a carne mortal.
+      Seu sangue celestial confere habilidades únicas, mas também uma alma atormentada pelo fardo divino.
+    </div>
+    <div class="abilities">Habilidades: Aura sagrada, força sobre-humana, percepção espiritual.</div>
+        <h3>Atributos base:</H3><br><br>
+      <p>Força: 4<br>
+        Agilidade: 2<br>
+        Magia: 4<br>
+        Combate: 2
+      </p>
+  </div>
+
+  <!-- ======== CLASSE INFERNAL 🔥 ======== -->
+  <div class="page">
+    <div class="class-title">🔥 Classe Infernal 🔥</div>
+  </div>
+
+  <div class="page creature">
+    <span class="symbol">🔥</span>
+    <h2>Demônio</h2>
+    <div class="desc">
+      Entidade forjada nas profundezas do submundo, nascida do caos e da tentação.
+      Manipula chamas e desejos humanos para corromper almas. Apesar de temidos, alguns buscam redenção.
+    </div>
+    <div class="abilities">Habilidades: Pirocinese, corrupção espiritual, metamorfose infernal.</div>
+        <h3>Atributos base:</H3><br><br>
+      <p>Agilidade: 3<br>
+        Intelecto: 3<br>
+        Magia: 4
+      </p>
+  </div>
+
+  <div class="page creature">
+    <span class="symbol">🔥</span>
+    <h2>Wendigo</h2>
+    <div class="desc">
+      Espírito canibal amaldiçoado pelas forças sombrias. Habita florestas geladas e devora viajantes perdidos.
+      Sua fome é infinita e sua forma grotesca reflete a ganância humana levada ao extremo.
+    </div>
+    <div class="abilities">Habilidades: Regeneração, fúria predatória, manipulação do medo.</div>
+        <h3>Atributos base:</H3><br><br>
+      <p>Força: 5<br>
+        Combate: 3<br>
+        Acrobacia: 4
+      </p>
+  </div>
+
+  <div class="page creature">
+    <span class="symbol">🔥</span>
+    <h2>Espectro</h2>
+    <div class="desc">
+      Alma aprisionada entre o mundo dos vivos e dos mortos. Assombra locais de sofrimento e guarda segredos antigos.
+      Invisível à maioria, manifesta-se por meio de frio e lamentos. Raramente busca vingança — prefere o silêncio eterno.
+    </div>
+    <div class="abilities">Habilidades: Intangibilidade, possessão, manipulação da escuridão.</div>
+        <h3>Atributos base:</H3><br><br>
+      <p>Percepção: 3<br>
+        Magia: 3<br>
+      </p>
+  </div>
+
+  <!-- ======== CLASSE NATURAL 🌿 ======== -->
+  <div class="page">
+    <div class="class-title">🌿 Classe Natural 🌿</div>
+  </div>
+
+  <div class="page creature">
+    <span class="symbol">🌿</span>
+    <h2>Fada</h2>
+    <div class="desc">
+      Espíritos da natureza que equilibram o ciclo da vida. Pequenas, mas poderosas, moldam o crescimento das plantas e o fluxo dos ventos.
+      Suas asas refletem as cores da aurora, e sua risada pode trazer bênçãos ou maldições.
+    </div>
+    <div class="abilities">Habilidades: Magia da natureza, ilusão, manipulação de energia vital.</div>
+        <h3>Atributos base:</H3><br><br>
+      <p>Magia: 4<br>
+        Adestramento: 3<br>
+        Agilidade: 2
+      </p>
+  </div>
+
+  <div class="page creature">
+    <span class="symbol">🌿</span>
+    <h2>Ogro</h2>
+    <div class="desc">
+      Criaturas de força colossal e temperamento feroz. Habitam cavernas e florestas profundas.
+      Apesar da aparência bruta, alguns ogros possuem sabedoria ancestral e um coração surpreendentemente puro.
+    </div>
+    <div class="abilities">Habilidades: Força descomunal, resistência física, fúria primitiva.</div>
+        <h3>Atributos base:</H3><br><br>
+      <p>Força: 3</p>
+  </div>
+
+  <div class="page creature">
+    <span class="symbol">🌿</span>
+    <h2>Goblin</h2>
+    <div class="desc">
+      Pequenos e ardilosos seres subterrâneos. Amantes de metais preciosos e travessuras, são engenheiros natos.
+      Apesar de sua aparência grotesca, dominam a arte da alquimia e das armadilhas.
+    </div>
+    <div class="abilities">Habilidades: Agilidade, engenhosidade, furtividade.</div>
+        <h3>Atributos base:</H3><br><br>
+      <p>Intelecto: 3</p>
+  </div>
+
+  <div class="page creature">
+    <span class="symbol">🌿</span>
+    <h2>Elfo primario</h2>
+    <div class="desc">
+      Criaturas de força magica imensa, e conhecimento ainda maior, foi a primeira especie de elfo e por causa disso odeiam todos outros elfos.
+      Tem aparencia pacifica, mas na verdade são agressivos e estrategicos
+    </div>
+    <div class="abilities">Habilidades: Recuperação rapida de mana, Conexão espiritual, Conhecimento ritualistico.</div>
+        <h3>Atributos base:</H3><br><br>
+      <p>Magia: 4<br>
+        adestramento: 4<br>
+        Intelecto: 3
+      </p>
+  </div>
+
+<!-- ======== SCRIPT PDF ======== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+  document.getElementById("generatePDF").addEventListener("click", () => {
+    const element = document.getElementById("bestiary");
+    const opt = {
+      margin: 0,
+      filename: "Bestiario_das_Almas_Enderka.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+    };
+    html2pdf().from(element).set(opt).save();
+  });
+</script>
+
+</body>
+</html>
